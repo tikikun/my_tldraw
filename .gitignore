@@ -8,6 +8,9 @@ package-lock.json
 .yarn
 # testing
 /coverage
+.pnp.cjs
+.pnp.loader.mjs
+
 
 # next.js
 /.next/
