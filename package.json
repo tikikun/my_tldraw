@@ -9,7 +9,9 @@
 	"homepage": "https://tldraw.dev",
 	"license": "MIT",
 	"scripts": {
-		"dev": "next dev",
+		"dev": "yarn copy-worker && next dev",
+		"copy-worker": "mkdir -p public/scripts && cp node_modules/pdfjs-dist/build/pdf.worker.min.mjs public/scripts/",
+		"prebuild": "yarn copy-worker",
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint"
